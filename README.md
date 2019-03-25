@@ -56,4 +56,3 @@ At the root folder, in CLI, enter the command below with a `.bmp` file to change
 * What assertions were made? 
 ##### Only a proof of life tests exists.
 * What assertions need to be / should be made?
-##### 
