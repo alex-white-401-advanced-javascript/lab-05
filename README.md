@@ -5,8 +5,9 @@
 ### Authors: Aaron Bruce & Alexander White
 
 ### Links and Resources
-* [PR]()
-* [travis]()
+[![Build Status](https://www.travis-ci.com/alex-white-401-advanced-javascript/lab-05.svg?branch=master)](https://www.travis-ci.com/alex-white-401-advanced-javascript/lab-05)
+* [PR](https://github.com/alex-white-401-advanced-javascript/lab-05/pull/1)
+* [travis](https://www.travis-ci.com/alex-white-401-advanced-javascript/lab-05)
 
 #### Documentation
 * [jsdoc]()
@@ -29,22 +30,16 @@ The following methods are included:
 * `parse()`: Creates useful information about bitmap with information gathered from the [Wiki](https://en.wikipedia.org/wiki/BMP_file_format).
 * `transform(operation)`: Transforms given `.bmp ` file with a method defined in Bitmap Class.
 
-#### `lib/transforms/`
-Each transform method is exported to `bitmap.js` to create a new file named `<old-file-name>.<operation>.bmp` in the `transforms/` folder. 
+#### `lib/transform/`
+The `transform` inpu tis passed to `bitmap.js` to create a new file named `old_file_name.operation.bmp`.
 
-See the unique outputs of the files created with each module below.
+##### Exported Values and Methods (for each transform)
 
-##### Exported Values and Methods (for each module)
+###### `fury.js` - `transformFury(bitmap) -> buffer`
+Given an 8-bit bitmap, changes the color of pixels located over the left eye. It also includes string diagonally to the left and right side of the head to simulate an eyepatch.
 
-###### `fury.js` - `transformMagenta(bitmap) -> buffer`
-For a given 8-bit bitmap buffer, changes the last color in the color palatte (index 255) to the RGBA value for magenta. This should be the lightest color in the color palatte. 
-
-When performed on the `baldy.bmp` starter file in this repo, this changes all the white pixels to magenta (the background and Johns eye's).
-
-###### `avocado.js` - `transformShave(bitmap) -> buffer`
-For a given 8-bit bitmap buffer, changes several rows of pixels in the bitmap to the color at index 244 in the color palatte. 
-
-When performed on the `baldy.bmp` starter file in this repo, this changes all the pixels in John's beard to be his skin color. It shaves his beard, effectively transforming "John Cokos" into "Jon Gentry".
+###### `avocado.js` - `transformAvocadobitmap) -> buffer`
+Given an 8-bit bitmap, changes the color of the pixels that make up the skin to green. This is to simulate and "avocado face mask"
 
 ### Setup
 * `npm i` - install all dependencies lsited in `package.json`
@@ -59,6 +54,6 @@ At the root folder, in CLI, enter the command below with a `.bmp` file to change
   * `npm run test`
   * `npm run lint`
 * What assertions were made? 
-##### There are no tests as of yet.
+##### Only a proof of life tests exists.
 * What assertions need to be / should be made?
 ##### 
