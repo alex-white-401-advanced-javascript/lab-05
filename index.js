@@ -29,22 +29,12 @@ function transformWithPromises() {
 
 const [file, operation] = process.argv.slice(2);
 /*
----------- HOW THE LINE ABOVE WORKS ----------
-The Node.js documentation states: 
-"The process.argv property returns an array containing the command line arguments passed when the Node.js process was launched."
-So process.argv contains the whole command line invocation.
-process.argv = ['node', 'some-script.js', 'arg-one', 'arg-two', ...]
-Another view of this:
-process.argv[0] == 'node'
-process.argv[1] == 'some-script.js'
-process.argv[2] == 'arg-one'
-process.argv[3] == 'arg-two'
-If the user enters "node  index.js  assets/baldy.bmp  shave":
-process.argv = ['node', 'index.js', 'assets/baldy.bmp', 'shave']
-If we slice this array at index 2, we get back 'assets/baldy.bmp' and 'shave'.
-Then we assign 
+------ How const [file, operation] = process.argv.slice(2)
+
+Process.argv returns and array that contains CLI arguments in node was launched.
+So when we pass in information it gives us something like: ['node', 'script.js', 'argOne', 'argTwo']
+So we slice it after the second argument and assign those values to `file` and `operation` to be used throughout.
 */
 
-// Calling the function above
 transformWithPromises();
 
